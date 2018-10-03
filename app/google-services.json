@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "382114991546",
+    "firebase_url": "https://dtuhub-a6e45.firebaseio.com",
+    "project_id": "dtuhub-a6e45",
+    "storage_bucket": "dtuhub-a6e45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382114991546:android:acca2e65134a5715",
+        "android_client_info": {
+          "package_name": "com.example.ashish.dtuhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382114991546-q9nd6mnb04j02ecegetkfejivp55lsu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ashish.dtuhub",
+            "certificate_hash": "7a5cc63f6d6e7f47caf743b49b65397dca45868d"
+          }
+        },
+        {
+          "client_id": "382114991546-n33clhs516jo1nba348v6dmqlar3tpce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYSp-R_hJmQ6w6aS_ZtZywzAV62rgcLyQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382114991546-n33clhs516jo1nba348v6dmqlar3tpce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
