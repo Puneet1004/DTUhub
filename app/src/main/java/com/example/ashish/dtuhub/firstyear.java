@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 public class firstyear extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class firstyear extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        Toast.makeText(this, "yoyo", Toast.LENGTH_SHORT).show();
     }
 
 }
