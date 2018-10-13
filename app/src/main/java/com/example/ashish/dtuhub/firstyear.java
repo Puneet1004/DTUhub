@@ -8,6 +8,7 @@ import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class firstyear extends AppCompatActivity {
 
@@ -85,6 +86,7 @@ public class firstyear extends AppCompatActivity {
                 popupMenu.show();
             }
         });
+        Toast.makeText(this, "yoyo", Toast.LENGTH_SHORT).show();
     }
 
 }
