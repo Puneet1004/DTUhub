@@ -12,7 +12,7 @@
         android:layout_marginTop="30dp">
 
         <AutoCompleteTextView
-            android:id="@+id/name"
+            android:id="@+id/r_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content">
 
         <AutoCompleteTextView
-            android:id="@+id/year"
+            android:id="@+id/r_year"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content">
 
         <AutoCompleteTextView
-            android:id="@+id/email"
+            android:id="@+id/r_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content">
 
         <AutoCompleteTextView
-            android:id="@+id/password"
+            android:id="@+id/r_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -76,7 +76,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/email_sign_in_button"
+        android:id="@+id/r_signin_btn"
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
