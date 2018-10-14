@@ -20,4 +20,5 @@
     <string name="title_activity_secondyear">secondyear</string>
     <string name="title_activity_thirdyear">thirdyear</string>
     <string name="title_activity_fourthyear">fourthyear</string>
+    <string name="title_activity_notepad">notepad</string>
 </resources>

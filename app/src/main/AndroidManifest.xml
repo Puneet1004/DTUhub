@@ -7,6 +7,9 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -42,7 +45,13 @@
         <activity
             android:name=".fourthyear"
             android:label="@string/title_activity_fourthyear"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".notepad"
+            android:label="@string/title_activity_notepad"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".papers" />
+        <activity android:name=".books_and_notes"></activity>
     </application>
 
 </manifest>
