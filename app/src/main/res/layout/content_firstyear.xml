@@ -53,4 +53,5 @@
                 android:text="Group B" />
         </android.support.v7.widget.CardView>
     </RelativeLayout>
+
 </RelativeLayout>

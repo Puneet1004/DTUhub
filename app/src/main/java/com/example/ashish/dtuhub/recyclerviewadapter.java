@@ -42,8 +42,6 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
         holder.filename.setText(items.get(position));
-
-
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.ashish.dtuhub;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -15,18 +16,18 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
 public class books_and_notes extends AppCompatActivity {
 
-    TextView tv1;
+    TextView tv1, emptytext;
 
     RecyclerView recyclerView;
     StorageReference storageReference;
     DatabaseReference databaseReference;
+    ProgressDialog progressDialog;
     private String DOWNLOAD_DIR = Environment.getExternalStoragePublicDirectory
             (Environment.DIRECTORY_DOWNLOADS).getPath();
 
@@ -34,6 +35,10 @@ public class books_and_notes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books_and_notes);
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading your data pls wait!!!");
+        progressDialog.show();
 
         Intent intent = getIntent();
         String year = intent.getStringExtra("year");
@@ -45,12 +50,13 @@ public class books_and_notes extends AppCompatActivity {
             databaseReference = FirebaseDatabase.getInstance().getReference().child(year).child(firebasestorage).child("books & notes");
         }
         //DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference().child(year).child(firebasestorage).child("books & notes");
+
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 String filename = dataSnapshot.getKey();
                 String url = dataSnapshot.getValue(String.class);
-
+                progressDialog.dismiss();
                 ((recyclerviewadapter) recyclerView.getAdapter()).update(filename, url);
 
             }
@@ -76,7 +82,7 @@ public class books_and_notes extends AppCompatActivity {
             }
         });
 
-        storageReference = FirebaseStorage.getInstance().getReference().child("first year").child("Group A").child("books & notes").child("bme");
+
         recyclerView = findViewById(R.id.recyclerview);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
