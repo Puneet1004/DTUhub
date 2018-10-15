@@ -11,6 +11,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -55,6 +56,28 @@ public class upload_activity extends AppCompatActivity {
         adapteryear.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         u_year.setAdapter(adapteryear);
 
+        u_year.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                year = adapterView.getItemAtPosition(position).toString();
+            }
+        });
+
+        u_branch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                branch = adapterView.getItemAtPosition(i).toString();
+
+            }
+        });
+
+        u_type.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                type = adapterView.getItemAtPosition(i).toString();
+            }
+        });
+
         ArrayAdapter<CharSequence> adapterbranch = ArrayAdapter.createFromResource(this, R.array.branches, android.R.layout.simple_spinner_dropdown_item);
         adapterbranch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         u_branch.setAdapter(adapterbranch);
@@ -65,9 +88,9 @@ public class upload_activity extends AppCompatActivity {
 
         //  year.getSelectedItem().toString();
 
-        year = u_year.getSelectedItem().toString();
+       /* year = u_year.getSelectedItem().toString();
         branch = u_branch.getSelectedItem().toString();
-        type = u_type.getSelectedItem().toString();
+        type = u_type.getSelectedItem().toString();*/
 
 
         storage = FirebaseStorage.getInstance();
