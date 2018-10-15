@@ -52,37 +52,40 @@ public class upload_activity extends AppCompatActivity {
         uploadfile = findViewById(R.id.u_upload_file);
         msg = findViewById(R.id.file_info);
 
-        ArrayAdapter<CharSequence> adapteryear = ArrayAdapter.createFromResource(this, R.array.year, android.R.layout.simple_spinner_dropdown_item);
+        final ArrayAdapter<CharSequence> adapteryear = ArrayAdapter.createFromResource(this, R.array.year, android.R.layout.simple_spinner_dropdown_item);
         adapteryear.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         u_year.setAdapter(adapteryear);
 
-        u_year.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        u_year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                year = adapterView.getItemAtPosition(position).toString();
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                year = adapteryear.getItem(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
-        u_branch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                branch = adapterView.getItemAtPosition(i).toString();
 
-            }
-        });
-
-        u_type.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                type = adapterView.getItemAtPosition(i).toString();
-            }
-        });
-
-        ArrayAdapter<CharSequence> adapterbranch = ArrayAdapter.createFromResource(this, R.array.branches, android.R.layout.simple_spinner_dropdown_item);
+        final ArrayAdapter<CharSequence> adapterbranch = ArrayAdapter.createFromResource(this, R.array.branches, android.R.layout.simple_spinner_dropdown_item);
         adapterbranch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         u_branch.setAdapter(adapterbranch);
 
-        ArrayAdapter<CharSequence> adaptertype = ArrayAdapter.createFromResource(this, R.array.type, android.R.layout.simple_spinner_dropdown_item);
+        u_branch.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                branch = adapterbranch.getItem(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        final ArrayAdapter<CharSequence> adaptertype = ArrayAdapter.createFromResource(this, R.array.type, android.R.layout.simple_spinner_dropdown_item);
         adaptertype.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         u_type.setAdapter(adaptertype);
 
@@ -91,6 +94,18 @@ public class upload_activity extends AppCompatActivity {
        /* year = u_year.getSelectedItem().toString();
         branch = u_branch.getSelectedItem().toString();
         type = u_type.getSelectedItem().toString();*/
+
+        u_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                type = adaptertype.getItem(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
         storage = FirebaseStorage.getInstance();
