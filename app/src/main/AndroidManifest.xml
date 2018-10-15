@@ -51,7 +51,14 @@
             android:label="@string/title_activity_notepad"
             android:theme="@style/AppTheme" />
         <activity android:name=".papers" />
-        <activity android:name=".books_and_notes"></activity>
+        <activity android:name=".books_and_notes" />
+
+        <activity android:name=".U_main_activity" />
+        <activity android:name=".U_first_year" />
+        <activity android:name=".U_third_year" />
+        <activity android:name=".U_fourth_year" />
+        <activity android:name=".U_second_year" />
+        <activity android:name=".upload_activity"></activity>
     </application>
 
 </manifest>

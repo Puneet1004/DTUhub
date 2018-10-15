@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string-array name="branches">
+        <item>Select Branch</item>
+        <item>COE</item>
+        <item>SOFTWARE</item>
+        <item>IT</item>
+        <item>CE</item>
+        <item>EE</item>
+        <item>ECE</item>
+        <item>BT</item>
+        <item>ME</item>
+    </string-array>
+</resources>

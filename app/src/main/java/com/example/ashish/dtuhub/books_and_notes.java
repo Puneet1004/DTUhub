@@ -15,7 +15,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
@@ -76,7 +75,7 @@ public class books_and_notes extends AppCompatActivity {
             }
         });
 
-        storageReference = FirebaseStorage.getInstance().getReference().child("first year").child("Group A").child("books & notes").child("bme");
+        //  storageReference = FirebaseStorage.getInstance().getReference().child("first year").child("Group A").child("books & notes").child("bme");
         recyclerView = findViewById(R.id.recyclerview);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
