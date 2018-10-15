@@ -75,7 +75,7 @@ public class secondyear extends AppCompatActivity implements View.OnClickListene
                             startActivity(intent1);
                             break;
                         case R.id.SE:
-                            firebasestorage = "software";
+                            firebasestorage = "SOFTWARE";
                             Intent intent2 = new Intent(secondyear.this, books_and_notes.class);
                             intent2.putExtra("firebasestorage", firebasestorage);
                             intent2.putExtra("year", "second year");
