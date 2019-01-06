@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/notes"
-        android:icon="@drawable/notes"
-        android:title="Make Notes" />
+
     <item
         android:id="@+id/downloads"
         android:icon="@drawable/downloads"
@@ -16,8 +13,5 @@
         android:id="@+id/settings"
         android:icon="@drawable/settings"
         android:title="Settings" />
-    <item
-        android:id="@+id/logout"
-        android:icon="@drawable/logout"
-        android:title="Log Out" />
+
 </menu>

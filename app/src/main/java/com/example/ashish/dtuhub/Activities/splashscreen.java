@@ -1,9 +1,11 @@
-package com.example.ashish.dtuhub;
+package com.example.ashish.dtuhub.Activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class SplashScreenActivity extends AppCompatActivity {
+import com.example.ashish.dtuhub.R;
+
+public class splashscreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
