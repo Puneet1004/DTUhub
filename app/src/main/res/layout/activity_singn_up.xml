@@ -15,8 +15,9 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -43,115 +44,211 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Sign Up"
+                android:fontFamily="@font/productsansbold"
+                android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:textSize="50sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="40dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-                <ImageView
-                    android:id="@+id/imageView21"
-                    android:layout_width="wrap_content"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="15dp"
-                    android:paddingRight="10dp"
-                    app:srcCompat="@drawable/user" />
+                    android:layout_marginTop="20sp"
+                    android:gravity="center">
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="0dp">
+                    <ImageView
+                        android:id="@+id/nameIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginTop="5dp"/>
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout8"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Phone Number" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:clipChildren="false">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginRight="40dp"
-                android:orientation="horizontal">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/usernameEditText"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="bottom"
+                            android:paddingLeft="16dp"
+                            android:fontFamily="@font/productsans"
+                            android:background="@drawable/signup_corners"
+                            android:ems="10"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:textColor="#212121"
+                            android:textColorHint="#616161"
+                            android:textSize="16dp" />
 
-                <ImageView
-                    android:id="@+id/yearImage"
-                    android:layout_width="wrap_content"
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="15dp"
-                    android:paddingRight="0dp"
-                    app:srcCompat="@drawable/year" />
+                    android:layout_marginTop="24dp"
+                    android:gravity="center">
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="0dp">
+                    <ImageView
+                        android:id="@+id/emailIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/phonenumber_grey" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout10"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Phone Number" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
+                        android:clipChildren="false">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="40dp"
-                android:orientation="horizontal">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/phoneNumberEditText"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:background="@drawable/signup_corners"
+                            android:ems="10"
+                            android:fontFamily="@font/productsans"
+                            android:hint="Mobile Number"
+                            android:inputType="number"
+                            android:paddingStart="16sp"
+                            android:paddingLeft="16sp"
+                            android:textSize="16dp"
+                            android:textColor="#212121"
+                            android:textColorHint="#616161" />
 
-                <ImageView
-                    android:id="@+id/imageView22"
-                    android:layout_width="wrap_content"
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="0"
-                    android:paddingRight="10dp"
-                    app:srcCompat="@drawable/lock" />
+                    android:layout_marginTop="24dp"
+                    android:gravity="center">
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="0dp">
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/localityIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/semester" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout12"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Password" />
-                </android.support.design.widget.TextInputLayout>
+                        android:clipChildren="false">
+
+                        <EditText
+                            android:id="@+id/semesterEditText"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16sp"
+                            android:background="@drawable/signup_corners"
+                            android:ems="10"
+                            android:hint="Current semester"
+                            android:fontFamily="@font/productsans"
+                            android:maxLength="6"
+                            android:inputType="number"
+                            android:paddingStart="16dp"
+                            android:paddingLeft="16sp"
+                            android:textSize="16dp"
+                            android:textColor="#212121"
+                            android:textColorHint="#616161" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp">
+
+
+                    <ImageView
+                        android:id="@+id/contactIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/branch" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false">
+
+                        <EditText
+                            android:id="@+id/branchEditText"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/localityEditText"
+                            android:layout_alignStart="@+id/localityEditText"
+                            android:layout_alignLeft="@+id/localityEditText"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16sp"
+                            android:background="@drawable/signup_corners"
+                            android:ems="10"
+                            android:hint="Current branch"
+                            android:fontFamily="@font/productsans"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:paddingStart="16dp"
+                            android:paddingLeft="16sp"
+                            android:textColor="#212121"
+                            android:textSize="16dp"
+                            android:textColorHint="#616161"
+                            android:translationY="3dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/singup" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/loginTextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Already Singned Up Go To Login"
+                android:layout_height="30sp"
+                android:text="Already Registered? Login"
+                android:fontFamily="@font/productsans"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
